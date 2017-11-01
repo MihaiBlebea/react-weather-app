@@ -1,0 +1,32 @@
+{
+    "name": "test-1",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start-server": "nodemon server/run.js",
+        "start-client": "npm run build",
+        "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+        "build_production": "webpack -p && cp src/index.html dist/index.html"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.17.0",
+        "body-parser": "^1.18.2",
+        "express": "^4.16.2",
+        "moment": "^2.19.1",
+        "react": "^16.0.0",
+        "react-dom": "^16.0.0"
+    },
+    "devDependencies": {
+        "webpack": "^3.8.1",
+        "webpack-dev-server": "^2.9.3",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-2": "^6.24.1"
+    }
+}
