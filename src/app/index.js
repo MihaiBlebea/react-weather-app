@@ -4,6 +4,7 @@ const axios = require('axios');
 
 const Loader = require('./components/Loader.js');
 const Cards = require('./components/Cards.js');
+const Input = require('./components/Input.js');
 
 class App extends React.Component {
     constructor()
@@ -27,8 +28,9 @@ class App extends React.Component {
     render()
     {
         return (
-            <div style={{ backgroundColor: 'red', position: 'absolute', top: 0, bottom: 0, right: 0, left: 0}}>
+            <div style={{ backgroundImager: 'url("img/bg.jpg")', position: 'absolute', top: 0, bottom: 0, right: 0, left: 0}}>
                 {(this.state.weather == null) ? <Loader/> : <Cards weather={this.state.weather}/>}
+                <Input/>
             </div>
         );
     }

@@ -7,9 +7,8 @@ class Cards extends React.Component {
     {
         return (
             <div className="card-container">
-                {this.props.weather.daily.data.map((day, index)=> {
-                    return <Card key={index} day={day}/>
-                })}
+
+                <Card day={this.props.weather.daily}/>
             </div>
         );
     }
